@@ -1,104 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoCloud Password Manager</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1E88E5;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #1E88E5;
-      margin-bottom: 10px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    a.button {
-      display: inline-block;
-      background-color: #1E88E5;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    a.button:hover {
-      background-color: #1565C0;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Password Manager No Cloud - Privacy Policy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --blue:#1e3a8a;
+    --blue2:#2563eb;
+    --blue-light:#ebf4ff;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#1f2937;
+    --muted:#64748b;
+    --border:#e2e8f0;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.hero{
+    background:var(--blue);
+    padding:60px 20px 90px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(255,255,255,.04);
+    top:-90px;
+    right:-70px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.03);
+    left:-80px;
+    bottom:-70px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.08);
+    color:#93c5fd;
+    border:1px solid rgba(255,255,255,.12);
+    padding:6px 16px;
+    border-radius:30px;
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:"DM Serif Display",serif;
+    color:#fff;
+    font-size:42px;
+    font-weight:400;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    max-width:600px;
+    margin:auto;
+}
+
+.container{
+    max-width:900px;
+    margin:-40px auto 60px;
+    padding:0 20px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.04);
+}
+
+.highlight{
+    background:var(--blue-light);
+    border-left:5px solid var(--blue2);
+}
+
+h2{
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+p{
+    color:#475569;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+}
+
+.icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+ul{
+    padding-left:22px;
+    margin-top:12px;
+}
+
+li{
+    margin:8px 0;
+}
+
+.checklist{
+    list-style:none;
+    padding:0;
+}
+
+.checklist li::before{
+    content:"✔ ";
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.contact{
+    text-align:center;
+    background:var(--blue);
+    color:white;
+}
+
+.contact p{
+    color:#cbd5e1;
+    margin:10px 0 20px;
+}
+
+.contact a{
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.contact a:hover{
+    background:rgba(255,255,255,.18);
+}
+
+footer{
+    text-align:center;
+    color:#94a3b8;
+    padding:25px;
+    font-size:13px;
+}
+
+@media(max-width:600px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.card{
+    padding:22px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>NoCloud Password Manager</h1>
-  <p>Secure, offline password manager with strong encryption 🔐</p>
-</header>
+<section class="hero">
 
-<main>
-  <section>
-    <h2>About the App</h2>
-    <p>
-      NoCloud Password Manager helps you store all your passwords securely and offline. 
-      Your data is encrypted and saved only on your device — only the app can access it. 
-      Easy-to-use interface and strong encryption ensure your digital life is safe.
-    </p>
-    <a class="button" href="https://play.google.com/store/apps/details?id=com.shafat.nocloudpasswordmanager&pcampaignid=web_share" target="_blank">Download on Google Play</a>
-  </section>
+<div class="badge">
+Privacy Policy
+</div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Hi, I'm Shafat Rasool, the developer behind NoCloud Password Manager. 
-      I build apps that focus on privacy, security, and usability. 
-      Feedback and suggestions are always welcome!
-    </p>
-  </section>
+<h1>No Cloud - Password Manager</h1>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:shafatrasool050@gmail.com">shafatrasool050@gmail.com</a></p>
-  </section>
-</main>
+<p>
+Designed for complete privacy. Your passwords stay on your device—always.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="card highlight">
+
+<h2>🛡 Privacy at a Glance</h2>
+
+<ul class="checklist">
+    <li>Your passwords stay on your device.</li>
+    <li>No cloud storage or account required.</li>
+    <li>Your encrypted vault is never uploaded.</li>
+    <li>Encrypted backups remain on your device unless you choose to share them.</li>
+    <li>Google AdMob is used to display ads.</li>
+</ul>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">🔐</div>
+
+<h2>Data Storage</h2>
+
+<p>
+All passwords, notes, categories, and settings are securely encrypted and stored locally on your device. Your information is never uploaded to our servers.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">💾</div>
+
+<h2>Backup & Restore</h2>
+
+<p>
+When you create a backup, an encrypted backup file is saved only to the location you choose. The app never uploads or accesses your backup.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📡</div>
+
+<h2>Internet Usage</h2>
+
+<p>
+Password Manager No Cloud works completely offline. An internet connection is not required to store or access your passwords.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🔑</div>
+
+<h2>Security</h2>
+
+<p>
+Access to your vault is protected by your Master Password or your device's built-in authentication. Only you can unlock your stored information.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Information Collection</h2>
+
+<p>
+Password Manager No Cloud does not collect, store, or transmit your passwords,
+notes, categories, or encrypted vault to us.
+</p>
+
+<p style="margin-top:12px;">
+To support the free version of the app, Google AdMob is used to display advertisements.
+AdMob may collect limited device information, such as advertising identifiers,
+IP address, device information, and diagnostic data in accordance with Google's
+Privacy Policy.
+</p>
+
+<p style="margin-top:12px;">
+We never receive or have access to your passwords or encrypted data.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Advertising</h2>
+
+<p>
+This app uses Google AdMob to display advertisements.
+Google may collect certain device information to provide and measure ads.
+</p>
+<p>
+For more information, please refer to
+<a href="https://policies.google.com/privacy" target="_blank">
+Google's Privacy Policy
+</a>.
+</p>
+<p style="margin-top:12px;">
+Your passwords, notes, encrypted vault, and backup files are never shared with Google AdMob or with us.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Changes to This Policy</h2>
+
+<p>
+We may update this Privacy Policy from time to time to reflect new features or legal requirements. Any updates will be published on this page along with the latest revision date.
+</p>
+
+<p style="margin-top:14px;">
+<strong>Last Updated:</strong> July 2026
+</p>
+
+</div>
+
+<div class="card contact">
+
+<h2>Questions?</h2>
+
+<p>
+If you have any questions regarding this Privacy Policy or the app, feel free to contact us.
+</p>
+
+<a href="mailto:shafatrasool050@gmail.com">
+✉️ shafatrasool050@gmail.com
+</a>
+
+</div>
 
 <footer>
-  &copy; 2025 Shafat Rasool. All rights reserved.
+
+© 2026 • Password Manager No Cloud
+
 </footer>
+
+</div>
 
 </body>
 </html>
